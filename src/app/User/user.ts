@@ -30,7 +30,7 @@ export class User {
     return false;
   }
 
-  isFull(): boolean{
+  isFull(): boolean {
     return this._currentLoad == this.maxLoad;
   }
 

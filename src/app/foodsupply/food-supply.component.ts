@@ -22,9 +22,9 @@ export class FoodSupplyComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params
-      .switchMap((params: Params) => this.foodSupplyService.getZone(+params['id']))
-      .subscribe(
-        foodSupply => this.foodSupply = foodSupply);
+        .switchMap((params: Params) => this.foodSupplyService.getZone(+params['id']))
+        .subscribe(
+          foodSupply => this.foodSupply = foodSupply);
   }
 
   startTakeFood(): void {
@@ -64,7 +64,7 @@ export class FoodSupplyComponent implements OnInit {
     return 0;
   }
 
-  get isButtonDisabled(): boolean{
+  get isButtonDisabled(): boolean {
     return !(this.currentUser && !this.currentUser.isFull());
   }
 

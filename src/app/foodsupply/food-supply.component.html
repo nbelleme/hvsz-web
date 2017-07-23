@@ -30,23 +30,23 @@
     </div>
   </div>
   <div *ngIf="foodSupply.level != 0 " class="card">
-      <fieldset class="row valign-wrapper">
-        <legend>Prendre une ressource</legend>
-        <input type="hidden" name="amount" id="amount" value="1"/>
-        <div class="input-field">
-          <label for="lifeToken">Votre code utilisateur</label>
-          <input type="text" name="lifeToken" id="lifeToken" required="required" pattern="\d*" />
-        </div>
-        <button [disabled]="isButtonDisabled" class="btn waves-effect waves-light" type="submit"
-                name="action" id="takeButton"
-                (mousedown)="startTakeFood()"
-                (mouseup)="stopTakeFood()"
-                (touchstart)="startTakeFood()"
-                (touchstop)="stopTakeFood()"
-          >
-          Prendre (maintenir appuyé)
-        </button>
-      </fieldset>
+    <fieldset class="row valign-wrapper">
+      <legend>Prendre une ressource</legend>
+      <input type="hidden" name="amount" id="amount" value="1"/>
+      <div class="input-field">
+        <label for="lifeToken">Votre code utilisateur</label>
+        <input type="text" name="lifeToken" id="lifeToken" required="required" pattern="\d*"/>
+      </div>
+      <button [disabled]="isButtonDisabled" class="btn waves-effect waves-light" type="submit"
+              name="action" id="takeButton"
+              (mousedown)="startTakeFood()"
+              (mouseup)="stopTakeFood()"
+              (touchstart)="startTakeFood()"
+              (touchstop)="stopTakeFood()"
+      >
+        Prendre (maintenir appuyé)
+      </button>
+    </fieldset>
   </div>
 
   <div>

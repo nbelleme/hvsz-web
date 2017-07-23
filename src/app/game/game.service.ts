@@ -1,4 +1,4 @@
-import {Http, Headers} from "@angular/http";
+import {Headers, Http} from "@angular/http";
 import {Injectable} from "@angular/core";
 import {Game} from "./game";
 
@@ -11,13 +11,13 @@ export class GameService {
 
   getGame(): Promise<Game> {
     return this.http
-      .get('http://localhost:8080/api/game', {headers: this.headers})
-      .toPromise()
-      .then(function (response) {
-        console.log(response.json());
-        return response.json() as Game
-      })
-      .catch(this.handleError);
+               .get('http://localhost:8080/api/game', {headers: this.headers})
+               .toPromise()
+               .then(function (response) {
+                 console.log(response.json());
+                 return response.json() as Game
+               })
+               .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {

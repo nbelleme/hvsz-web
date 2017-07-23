@@ -9,5 +9,5 @@ export class SafeZone {
   private level: number;
   private capacity: number;
   private name: string;
-  private destroyed : boolean;
+  private destroyed: boolean;
 }

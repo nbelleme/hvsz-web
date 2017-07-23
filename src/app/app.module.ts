@@ -6,7 +6,7 @@ import {CommonModule} from '@angular/common';
 import {MaterializeModule} from 'angular2-materialize';
 
 
-import {AppRoutingModule}   from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {GameComponent} from './game/game.component';

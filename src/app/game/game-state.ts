@@ -1,4 +1,4 @@
-export enum GameState{
+export enum GameState {
   NONE,
   HUMAN_VICTORY,
   ZOMBIE_VICTORY,
