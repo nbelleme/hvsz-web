@@ -1,5 +1,4 @@
 export enum GameState {
-  NONE,
   HUMAN_VICTORY,
   ZOMBIE_VICTORY,
   ACTIVE,

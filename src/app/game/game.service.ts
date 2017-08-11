@@ -9,15 +9,24 @@ export class GameService {
   constructor(private http: Http) {
   }
 
-  getGame(): Promise<Game> {
+  get(id:string): Promise<Game> {
     return this.http
-               .get('http://localhost:8080/api/game', {headers: this.headers})
+               .get('http://localhost:8080/api/game/get/'+id)
                .toPromise()
                .then(function (response) {
-                 console.log(response.json());
                  return response.json() as Game
                })
                .catch(this.handleError);
+  }
+
+  getAll(): Promise<Game[]> {
+    return this.http
+      .get("http://localhost:8080/api/game/get/all")
+      .toPromise()
+      .then(function(response){
+        return response.json() as Game[];
+      })
+      .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {

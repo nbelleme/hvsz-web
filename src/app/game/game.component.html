@@ -9,21 +9,21 @@
     <h2>Etat des Safe Zones:</h2>
     <ul *ngIf="game.safeZones" class="zones">
       <li *ngFor="let zone of game.safeZones">
-        <p>{{zone.name}} : {{zone.level}} / {{zone.capacity}}</p>
+        <p>Zone de sécurité n°{{zone.id}} : {{zone.level}} / {{zone.capacity}}</p>
         <a>accès rapide</a>
       </li>
     </ul>
 
-    <h2>Etat des Food Supplies:</h2>
-    <ul *ngIf="game.foodSupplies" class="zones">
-      <li *ngFor="let zone of game.foodSupplies">
-        <p>{{zone.name}} : {{zone.level}} / {{zone.capacity}}</p>
+    <h2>Etat des Food Supplies :</h2>
+    <ul *ngIf="game.supplyZones" class="zones">
+      <li *ngFor="let zone of game.supplyZones">
+        <p>Zone de ravitaillement n°{{zone.id}} : {{zone.level}} / {{zone.capacity}}</p>
         <a [routerLink]="['/food-supply', zone.id]">accès rapide</a>
       </li>
     </ul>
 
     <div [ngSwitch]="game.status.gameState">
-      <div *ngSwitchCase="'NOT_STARTED'">Hello Mohan
+      <div *ngSwitchCase="'NOT_STARTED'">
         <a class="waves-effect waves-light btn" href="/game/start">Lancer le jeu</a>
       </div>
       <div *ngSwitchCase="'ACTIVE'">
