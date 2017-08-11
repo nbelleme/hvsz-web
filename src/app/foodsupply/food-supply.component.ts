@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {FoodSuppplyService} from './food-supply.service';
 import {FoodSupply} from './food-supply';
 import {ActivatedRoute, Params} from '@angular/router';
-import {User} from '../User/user';
+import {User} from '../user/user';
 
 @Component({
   selector: 'food-supply',
