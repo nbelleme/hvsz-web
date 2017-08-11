@@ -1,0 +1,5 @@
+<div *ngIf="games">
+  <div *ngFor="let game of games;">
+    <a routerLink="game/{{game.id}}">{{game.id}}</a>
+  </div>
+</div>

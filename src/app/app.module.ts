@@ -14,12 +14,14 @@ import {GameService} from './game/game.service';
 
 import {FoodSupplyComponent} from './foodsupply/food-supply.component';
 import {FoodSuppplyService} from './foodsupply/food-supply.service';
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
-    FoodSupplyComponent
+    FoodSupplyComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

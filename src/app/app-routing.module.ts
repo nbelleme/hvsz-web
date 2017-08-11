@@ -2,9 +2,11 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import {GameComponent} from "./game/game.component";
 import {FoodSupplyComponent} from "./foodsupply/food-supply.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 const routes: Routes = [
-  {path: 'game', component: GameComponent},
+  {path: '', component: DashboardComponent},
+  {path: 'game/:id', component: GameComponent},
   {path: 'food-supply/:id', component: FoodSupplyComponent}
 ];
 
